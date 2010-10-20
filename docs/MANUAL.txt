@@ -1,0 +1,27 @@
+Developer Manual
+================
+
+Note: You find a developer manual for raptus.article at 
+`raptus.article.core <http://pypi.python.org/pypi/raptus.article.core>`_.
+Please have look there if you need more information.
+
+Code overview
+=============
+
+Components
+----------
+above content title:
+
+- raptus.article.wysiwyg.left
+- raptus.article.wysiwyg.right
+
+above content body:
+
+- raptus.article.wysiwyg.full
+
+Interfaces
+----------
+file: interfaces.py
+
+- ILinks (Provider for links contained in an article)
+    - getLinks (Returns a list of links (catalog brains))

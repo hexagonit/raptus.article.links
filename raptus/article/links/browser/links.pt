@@ -1,0 +1,28 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:metal="http://xml.zope.org/namespaces/metal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     class="links"
+     tal:condition="view/links"
+     i18n:domain="raptus.article">
+  <h2 i18n:translate="">
+    Links
+  </h2>
+  <ul class="visualNoMarker manageableList">
+    <li tal:repeat="item view/links">
+      <metal:manage use-macro="context/raptus_article_macros/macros/manage" />
+      <a href=""
+         tal:attributes="href string:${item/url};
+                         title item/description">
+        <span tal:content="item/title">
+          Title
+        </span>
+      </a>
+      <span class="discreet documentDescription"
+            tal:condition="item/description"
+            tal:content="item/description">
+        Description
+      </span>
+    </li>
+  </ul>
+</div>
