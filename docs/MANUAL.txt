@@ -10,18 +10,15 @@ Code overview
 
 Components
 ----------
-above content title:
 
-- raptus.article.wysiwyg.left
-- raptus.article.wysiwyg.right
-
-above content body:
-
-- raptus.article.wysiwyg.full
+plone.belowcontentbody
+``````````````````````
+- raptus.article.links
 
 Interfaces
 ----------
-file: interfaces.py
 
+file: interfaces.py
+```````````````````
 - ILinks (Provider for links contained in an article)
     - getLinks (Returns a list of links (catalog brains))
